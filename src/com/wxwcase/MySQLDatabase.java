@@ -7,6 +7,7 @@ import java.sql.Statement;
 
 
 public class MySQLDatabase {
+	// comment added
 	
 	public boolean importData(String sql) {
 		String dataStatement = sql;
