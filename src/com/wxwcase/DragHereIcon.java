@@ -47,6 +47,7 @@ import javax.swing.SwingConstants;
 import javax.swing.UIManager;
 
 public class DragHereIcon implements Icon {
+    // New commit on 2014-09-19
     
 	private int size = 80;
 	private float a = 4f;
@@ -63,15 +64,15 @@ public class DragHereIcon implements Icon {
     private static Container subframeContentPane = null;
     private static JPanel contentPanel = null;
     private static String tags = "";
-    private static ButtonGroup bg = null;
+//    private static ButtonGroup bg = null;
     private static JButton viewButton = null;
     private static JButton addButton = null;
     private static JScrollPane scrollPane = null;
     private static JTextArea textArea = null;
-    private static JPanel viewPane = null;
-    private static Object[] possibilities = {
-    "Bioinfomatics", "Science", "Graph", "Algorithm"
-    };
+//    private static JPanel viewPane = null;
+//    private static Object[] possibilities = {
+//    "Bioinfomatics", "Science", "Graph", "Algorithm"
+//    };
     
 	@Override
 	public void paintIcon(Component c, Graphics g, int x, int y) {
@@ -222,7 +223,8 @@ public class DragHereIcon implements Icon {
 	                    	System.out.println("Drag done!");
 	                    	String resultStatement;
 	                    	if(file.isDirectory()) {
-	                    		resultStatement = "INSERT INTO testtable3 (isDir, fileName, filePath) VALUES('Y','"+ file.getName() + "','" + file.getPath() + "')";
+	                    		resultStatement =
+                                        "INSERT INTO testtable3 (isDir, fileName, filePath) VALUES('Y','"+ file.getName() + "','" + file.getPath() + "')";
                             } else {
 	                    		resultStatement = "INSERT INTO testtable3 (isDir, fileName, filePath) VALUES('N','"+ file.getName() + "','" + file.getPath() + "')";
                             }
